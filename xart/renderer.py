@@ -48,6 +48,7 @@ class Renderer(object):
 
     def render(self, text):
         # type: (object) -> object
+        print(self.font._font_name)
         data = [[] for _ in range(self.font.height)]
         for ch in text:
             for idx, line in enumerate(self.font.getchar(ch)['char']):

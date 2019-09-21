@@ -11,7 +11,7 @@ VERSION = __version__
 sys.path.pop(0)
 
 
-with open('README.rst') as fp:
+with open('README.md') as fp:
     README = fp.read()
 
 
