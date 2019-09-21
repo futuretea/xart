@@ -3,7 +3,7 @@
 
 from __future__ import unicode_literals, print_function
 
-from errors import ColorError
+from xart.errors import ColorError
 import chardet
 
 _FMT = u'\033[0;3{}m{}\033[0m'.format
@@ -48,6 +48,7 @@ class Renderer(object):
 
     def render(self, text):
         # type: (object) -> object
+        print(self.font._font_name)
         data = [[] for _ in range(self.font.height)]
         for ch in text:
             for idx, line in enumerate(self.font.getchar(ch)['char']):
